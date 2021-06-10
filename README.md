@@ -1,6 +1,6 @@
 # Jeu du Pendu
 ## Description
-Vous avez droit à 5 erreurs maximum avant que le pendu n'apparaisse complètement. Le thème choisi pour ce jeu est """Maison""". Libre à vous d'ajouter autant de mots que vous voulez en respectant la nomenclature du fichier.
+Vous avez droit à 5 erreurs maximum avant que le pendu n'apparaisse complètement. Le thème choisi pour ce jeu est "Maison". Libre à vous d'ajouter autant de mots que vous voulez en respectant la nomenclature du fichier.
 
 ## Fichiers texte
 Le fichier dictionnaire.txt contient la liste de mots utilisés pour ce jeu.  
