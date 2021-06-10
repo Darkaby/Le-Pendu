@@ -13,7 +13,7 @@ const int number_of_words=23;
 string pendu_list[number_of_pendu*pendu_length];
 string dictionnary[number_of_words];
 
-// Lire le fichier contenant les différentes représentations du pendu
+// Lire le fichier contenant les diffÃ©rentes reprÃ©sentations du pendu
 void create_pendu_list()
 {
     ifstream pendu;
@@ -47,7 +47,7 @@ void create_dictionnary()
     dic.close();
 }
 
-// Afficher l'une des représentations du pendu
+// Afficher l'une des reprÃ©sentations du pendu
 void display_pendu(int number)
 {
     for (int i=number*pendu_length; i<number*pendu_length+pendu_length; i++)
@@ -57,7 +57,7 @@ void display_pendu(int number)
     cout << endl;
 }
 
-// Formatter le mot à deviner pour une meilleur lisibilité
+// Formatter le mot Ã  deviner pour une meilleur lisibilitÃ©
 string format_word(string mot)
 {
     string txt="";
@@ -70,7 +70,7 @@ string format_word(string mot)
     return txt;
 }
 
-// Cacher les lettres du mots à deviner
+// Cacher les lettres du mots Ã  deviner
 string hide_word(string mot)
 {
     string txt="";
@@ -82,7 +82,7 @@ string hide_word(string mot)
     return txt;
 }
 
-// Ajouter les lettres trouvées dans le mot
+// Ajouter les lettres trouvÃ©es dans le mot
 string add_letters(char letter, string word, string hidden_word)
 {
     for (int i=0; i<word.length(); i++)
@@ -134,13 +134,13 @@ int main()
             cin >> letter;
             string word = add_letters(letter, word_to_guess, word_hidden);
 
-            // Si le mot à trouver est inchangé, alors la lettre entrée n'a pas été trouvée
+            // Si le mot Ã  trouver est inchangÃ©, alors la lettre entrÃ©e n'a pas Ã©tÃ© trouvÃ©e
             if (word_hidden==word)
             {
                 errors--;
                 cout << "\'" << letter << "\' ne fait pas partie de ce mot." << endl;
             }
-            // Sinon, alors on modifie le mot à trouver
+            // Sinon, alors on modifie le mot Ã  trouver
             else
             {
                 cout << "\'" << letter << "\' fait bien partie de ce mot." << endl;
@@ -153,14 +153,14 @@ int main()
             cout << "Vous n'avez plus droit qu'a " << errors << " erreurs.\n" << endl;
         }
 
-        // Gagné ou perdu?
+        // GagnÃ© ou perdu?
         if (errors>=0)
-            cout << "Felicitations, vous avez devine juste!" << endl;
+            cout << "Felicitations, vous avez devine juste! Le mot etait bien: " << word_to_guess << endl;
         else
             display_pendu(0);;
 
         // Recommencer la partie
-        cout << "La partie est terminee! Voulez-vous tenter votre chance une nouvelle fois?";
+        cout << "La partie est terminee! Voulez-vous tenter votre chance une nouvelle fois (y/n)?";
         cin >> ans;
     }
 
